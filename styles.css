@@ -1,14 +1,15 @@
-body, html {
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 .container {
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto 1fr;
-    height: 100vh;
+    height: 100%;
 }
 
 .sidebar {
@@ -20,14 +21,14 @@ body, html {
 .logo-section {
     display: flex;
     align-items: center;
-    font-size: 32px;
+    font-size: 24px;
     column-gap: 12px;
     color: white;
-    padding-bottom: 48px;
+    padding-bottom: 36px;
 }
 
 .logo {
-    width: 72px;
+    width: 52px;
     mix-blend-mode: multiply;
 }
 
@@ -36,20 +37,20 @@ body, html {
     align-items: center;
     columns: white;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 18px;
     color: white;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     height: 50px;
 }
 
 .icons {
-    width: 48px;
+    width: 36px;
     mix-blend-mode: multiply;
     padding-right: 16px;
 }
 
 .header {
-    padding: 12px;
+    padding: 8px 24px;
     box-shadow: 0px 1px 2px;
     grid-column: 2 / -1;
 }
@@ -61,14 +62,24 @@ body, html {
 }
 
 .header-bottom {
-    padding-top: 36px;
+    padding-top: 18px;
     padding-bottom: 16px;
 }
 
-.search-section, .user-section, .profile-section, .button-section {
+.search-section, .user-section, .button-section {
     display: flex;
     align-items: center;
     column-gap: 12px;
+}
+
+.profile-section {
+    display: grid;
+    grid-template-columns: 25% auto;
+    align-items: center;
+}
+
+.greeting {
+    font-weight: bold;
 }
 
 #searchbar {
@@ -89,7 +100,7 @@ button {
 .content-section {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 1fr 1fr;
     background-color: rgb(241, 241, 241);
 }
 
@@ -98,7 +109,8 @@ button {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto repeat(3, 1fr);
     padding: 16px;
-    gap: 16px;
+    gap: 8px 16px;
+    grid-row: 1 / -1;
 }
 
 h2 {
@@ -115,10 +127,11 @@ h3 {
 .content-box {
     display: grid;
     grid-template-rows: 12% 1fr 20%;
-    padding: 8px;
+    padding: 12px;
     background-color: white;
     border-left: solid 5px orange;
     border-radius: 10px;
+    margin-bottom: 8px;
 }
 
 .content-links {
@@ -130,9 +143,8 @@ h3 {
     grid-template-rows: auto 1fr;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    padding: 16px;
-    align-items: start;
-    gap: 16px 8px;
+    padding: 16px 8px 0 8px;
+    gap: 8px;
 }
 
 .announcement-box {
@@ -145,13 +157,54 @@ h3 {
 
 .announcement-item {
     display: grid;
-    grid-template-rows: 18% 36px;
+    grid-template-rows: 20px 1fr;
+    padding: 8px;
+}
+
+.divider {
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: auto 1fr;    
+    grid-column: 2 / 3;
+    padding: 16px 8px 16px 8px;
+    gap: 8px 8px;
+}
+
+.trending-box {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: white;
+    border-radius: 10px;
+    padding: 1px 24px 1px 24px;
+    height: 100%;
+}
+
+.trending-item {
+    display: grid;
+    grid-template-columns: 25% auto;
+    align-content: center;
+}
+
+.trend-icon {
+    align-self: center;
+}
+
+.trend {
+    font-weight: bold;
 }
 
 .content-box, .announcement-box, .trending-box {
     box-shadow: 1px 1px 3px lightgray;
 }
 
-.trending {
-    grid-column: 2 / 3;
+img[src="account-circle.png"] {
+    height: 24px;
 }
